@@ -1,6 +1,6 @@
-options:
-  logging: CLOUD_LOGGING_ONLY
 steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/myapp', '.']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy']
+  args: ['run', 'deploy', 'myapp', '--image', 'gcr.io/$PROJECT_ID/myapp', '--region', 'us-central1', '--platform', 'managed']
 timeout: '1600s'
