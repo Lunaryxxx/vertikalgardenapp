@@ -2,7 +2,7 @@
 FROM python:3.7-slim
 
 # Set the working directory in the container to /app
-WORKDIR /app
+WORKDIR /vertikalgardenapp
 
 # Add the current directory contents into the container at /app
 ADD . /app
