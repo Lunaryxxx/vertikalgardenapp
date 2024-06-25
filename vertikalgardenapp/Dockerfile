@@ -16,5 +16,5 @@ COPY . .
 # Expose the port Flask is running on
 EXPOSE 8080
 
-# Define the command to run the application
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "main:app"]
+# Run app.py when the container launches
+CMD ["gunicorn", "--bind", ":8080", "main:app"]
