@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import tensorflow as tf
 import numpy as np
-import math
+import os
 
 app = Flask(__name__)
 
@@ -28,4 +28,3 @@ def predict():
 
 if __name__ == '__main__':
     app.run(port=int(os.environ.get("PORT", 8080)), host='0.0.0.0', debug=True)
-
