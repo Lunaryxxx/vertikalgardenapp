@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 # Load your trained model
-model = tf.keras.models.load_model('harvest_prediction_model.h5')
+model = tf.keras.models.load_model('harvest_prediction_model.keras')
 
 @app.route('/predict', methods=['POST'])
 def predict():
