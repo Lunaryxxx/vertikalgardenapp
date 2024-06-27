@@ -1,4 +1,5 @@
 Flask
-tensorflow
+torch
 numpy
-gunicorn
+scikit-learn
+joblib
