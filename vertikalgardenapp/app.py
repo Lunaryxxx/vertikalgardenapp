@@ -23,8 +23,8 @@ def predict():
     # Round the prediction to the nearest integer
     prediction_rounded = round(prediction[0][0])
 
-    # Send back the result as JSON
-    return jsonify(prediction=int(prediction_rounded))
+    # Send back the result as JSON with the desired format
+    return jsonify(prediction=f"Prediction: {prediction_rounded} Days")
 
 if __name__ == '__main__':
     app.run(port=int(os.environ.get("PORT", 8080)), host='0.0.0.0', debug=True)
