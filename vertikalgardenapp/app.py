@@ -1,6 +1,5 @@
 from flask import Flask, request, Response
 import numpy as np
-import pandas as pd
 import joblib
 import os
 
@@ -8,9 +7,6 @@ app = Flask(__name__)
 
 # Load the trained Random Forest model
 model = joblib.load('ModelRFR.pkl')
-
-# Define feature names used during training
-feature_names = ['TDS_ppm', 'TEMPERATURE_c', 'HUMIDITY', 'pH']
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -21,11 +17,8 @@ def predict():
     # Convert list to NumPy array and reshape to 2D
     sensor_readings = np.array(sensor_readings).reshape(1, -1)
 
-    # Create a DataFrame with the sensor readings and feature names
-    sensor_readings_df = pd.DataFrame(sensor_readings, columns=feature_names)
-
     # Make prediction using the Random Forest model
-    prediction = model.predict(sensor_readings_df)
+    prediction = model.predict(sensor_readings)
 
     # Round the prediction to the nearest integer
     prediction_rounded = round(prediction[0])
