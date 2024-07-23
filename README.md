@@ -1,6 +1,6 @@
 # Harvest Prediction API
 
-This repository hosts a Flask API for predicting harvest outcomes based on sensor readings using a TensorFlow model.
+This repository hosts a Flask API for predicting harvest outcomes based on sensor readings using a Random Forest model.
 
 ## Overview
 
