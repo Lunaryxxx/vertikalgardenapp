@@ -1,4 +1,4 @@
-logsBucket: gs://vertikalgardenbuckettest
+logsBucket: gs://vertikalgardenbucket
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/myapp', '.']
