@@ -25,7 +25,7 @@ def predict():
     prediction = model.predict(sensor_readings_scaled)
 
     # Send back the result as plain text with the desired format
-    return Response(f"Predicted Condition: {prediction[0]}", mimetype='text/plain')
+    return Response(f"{prediction[0]}", mimetype='text/plain')
 
 if __name__ == '__main__':
     app.run(port=int(os.environ.get("PORT", 8080)), host='0.0.0.0', debug=True)
