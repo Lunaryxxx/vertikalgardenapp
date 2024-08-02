@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 # Tentukan path untuk model yang sudah disimpan
-model_path = 'hydroponic_rf_model.pkl'  # Sesuaikan dengan path model Anda
+model_path = 'vertikalgardenrfv1.pkl'
 
 # Muat model
 model = joblib.load(model_path)
