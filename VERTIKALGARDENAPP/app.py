@@ -22,7 +22,7 @@ def predict():
         sensor_readings = data.get("sensor_readings")
 
         # Validasi input data
-        if not sensor_readings atau len(sensor_readings) != 4:
+        if not sensor_readings or len(sensor_readings) != 4:
             return Response('Invalid input. Expecting 4 sensor readings.', status=400, mimetype='text/plain')
 
         # Ubah sensor readings menjadi DataFrame dengan nama kolom yang sesuai
