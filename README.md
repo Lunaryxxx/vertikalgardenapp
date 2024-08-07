@@ -78,3 +78,5 @@ Response
 # Acknowledgements
 The Random Forest model used in this project was trained using data from vertical garden sensors.
 
+# License
+This project is licensed under the MIT License - see the LICENSE file for details.
