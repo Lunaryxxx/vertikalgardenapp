@@ -10,7 +10,7 @@ This repository contains a Flask-based API for predicting the optimality of cond
 
 ## Requirements
 
-- Python 3.x
+- Python 3.11
 - Flask
 - joblib
 - pandas
@@ -58,4 +58,23 @@ This repository contains a Flask-based API for predicting the optimality of cond
 The endpoint expects a JSON object containing sensor readings.
 
 - **sensor_readings**: A list of 4 numerical values representing the sensor readings in the following order:
-  - TDS
+  - TDS_ppm: Total Dissolved Solids in ppm
+  - TEMPERATURE_c: Temperature in Celsius
+  - HUMIDITY: Humidity in percentage
+  - pH: pH level
+
+Example request:
+
+```json
+{
+  "sensor_readings": [500, 25.5, 60, 6.5]
+}
+```
+Response
+200 OK: Returns the prediction result as plain text (Optimal or Tidak Optimal).
+400 Bad Request: Returns an error message if the input is invalid.
+500 Internal Server Error: Returns an error message if there is a server-side error.
+
+# Acknowledgements
+The Random Forest model used in this project was trained using data from vertical garden sensors.
+
