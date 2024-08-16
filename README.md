@@ -62,6 +62,12 @@ The endpoint expects a JSON object containing sensor readings.
   - TEMPERATURE_c: Temperature in Celsius
   - HUMIDITY: Humidity in percentage
   - pH: pH level
+    
+- Rentang Optimal :
+  - Suhu: 18°C - 24°C
+  - Kelembapan: 50% - 70%
+  - TDS (Nutrisi): 1050-1400 ppm
+  - pH: 7.0
 
 Example request:
 
