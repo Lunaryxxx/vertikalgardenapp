@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 # Tentukan path untuk model yang sudah disimpan
-model_path = 'vertikalgardenrfv1.pkl'
+model_path = 'vertikalgardenrfv2.pkl'
 
 # Muat model
 model = joblib.load(model_path)
