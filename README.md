@@ -20,8 +20,8 @@ This repository contains a Flask-based API for predicting the optimality of cond
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/yourusername/vertikalgarden-predictor.git
-    cd vertikalgarden-predictor
+    git clone https://github.com/Lunaryxxx/vertikalgartdenapp.git
+    cd vertikalgartdenapp
     ```
 
 2. Create a virtual environment and activate it:
