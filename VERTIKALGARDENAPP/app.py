@@ -34,7 +34,7 @@ def predict():
         # Lakukan prediksi menggunakan model yang telah dimuat
         prediction = model.predict(input_data)
 
-        # Jika prediksi adalah angka, Anda mungkin ingin mengonversinya ke label asli
+        # Prediksi adalah angka konversinya ke label asli
         # Misalnya: 0 -> "Optimal", 1 -> "Tidak Optimal"
         prediction_label = "Optimal" if prediction[0] == 0 else "Tidak Optimal"
 
